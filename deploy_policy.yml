@@ -1,0 +1,15 @@
+# Basic experiment configuration
+
+# modify this !!!!!
+policy_name: sem_policy 
+setting: null 
+ckpt_path: checkpoints/stack_blocks_three/model.safetensors
+config_file: robo_orchard_lab/projects/sem/robotwin/config_sem_robotwin.py
+ckpt_setting: null
+
+# keep unchanged
+task_name: null  
+seed: null 
+instruction_type: unseen 
+expert_data_num: null 
+checkpoint_num: null 
