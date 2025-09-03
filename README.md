@@ -4,6 +4,7 @@ This project uses the following components from Horizon Robotics:
 
 - **robo_orchard_lab**: Sourced from [robo_orchard_lab](https://github.com/HorizonRobotics/robo_orchard_lab)
 - **robo_orchard_core**: Sourced from [robo_orchard_core](https://github.com/HorizonRobotics/robo_orchard_core)
+
 # 2. Install
 ## Git Clone
 ```bash
