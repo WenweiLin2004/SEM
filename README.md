@@ -1,4 +1,10 @@
-# 1. Install
+# 1. Acknowledgments
+
+This project uses the following components from Horizon Robotics:
+
+- **robo_orchard_lab**: Sourced from [robo_orchard_lab](https://github.com/HorizonRobotics/robo_orchard_lab)
+- **robo_orchard_core**: Sourced from [robo_orchard_core](https://github.com/HorizonRobotics/robo_orchard_core)
+# 2. Install
 ## Git Clone
 ```bash
 cd RoboTwin/policy
@@ -31,13 +37,13 @@ pre_ckpt
         ├──pytorch_model.bin
         ...
 ```
-# 2. Prepare Training Data
+# 3. Prepare Training Data
 ```bash
 bash process_data.sh ${task_name} ${task_config} ${expert_data_num}
 # bash process_data.sh place_empty_cup demo_randomized 10
 ```
 
-# 3. Train Policy
+# 4. Train Policy
 The training configuration is set at the path `robo_orchard_lab/projects/sem/robotwin/config_sem_robotwin.py`.
 The trained models will be saved in the `SEM/workspace` folder.
 
@@ -49,7 +55,7 @@ bash train.sh ${task_name} ${task_config} ${expert_data_num} ${seed} ${gpu_id}
 bash multi_train.sh ${task_name} ${task_config} ${expert_data_num} ${seed} ${num_processes} ${gpu_ids}
 # bash multi_train.sh place_empty_cup demo_randomized 10 0 4 0,1,2,3
 ```
-# 4. Eval Policy
+# 5. Eval Policy
 Move the models from `./workspace` to `./checkpoints`,and modify the `ckpt_path` parameter in both `./eval.sh` and `deploy_policy.yml`
 
 then
